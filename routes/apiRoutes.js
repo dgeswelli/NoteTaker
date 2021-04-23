@@ -14,6 +14,12 @@ router.get('/notes', (req, res) => {
 })
 
 // create a post request
+router.post ("/notes", (req, res) =>{
+    store
+    .postNote(req.body)
+    .then((note) => res.json(note))
+    .catch((err) => res.status(500).json(err));
+});
 
 // create a delete request
 
