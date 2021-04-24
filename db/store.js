@@ -4,6 +4,7 @@ const util = require("util")
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
+
 class Store {
     read() {
         return readFileAsync("db/db.json", "utf8");
@@ -31,6 +32,7 @@ class Store {
         .then(() => savedNote);
 
     }
+   
 }
 
 module.exports = new Store();

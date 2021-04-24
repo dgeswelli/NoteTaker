@@ -21,7 +21,6 @@ router.post ("/notes", (req, res) => {
     .catch((err) => res.status(500).json(err));
 });
 
-// create a delete request
 
 
 module.exports = router;
